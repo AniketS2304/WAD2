@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exam Portal - Mobile App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- jQuery Mobile CDN -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    .custom-header {
+      background-color: #007BFF !important;
+      color: white !important;
+      text-align: center;
+    }
+    .custom-footer {
+      background-color: #343a40 !important;
+      color: white !important;
+      text-align: center;
+    }
+    .custom-content {
+      background-color: #f2f2f2;
+      padding: 15px;
+    }
+    .highlight-btn {
+      background-color: #28a745 !important;
+      color: white !important;
+    }
+  </style>
+
+  <script>
+    $(document).on("pageinit", "#home", function () {
+      $("#welcomeAlert").on("click", function () {
+        alert("🎉 Welcome to the Exam Portal Mobile App!");
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+<!-- 🏠 HOME PAGE -->
+<div data-role="page" id="home">
+
+  <div data-role="header" class="custom-header">
+    <h1>Exam Portal</h1>
+  </div>
+
+  <div role="main" class="ui-content custom-content">
+    <h3>Welcome, Student 👋</h3>
+    <p>This app helps you manage exams, dates, and results efficiently.</p>
+
+    <a href="#about" class="ui-btn ui-icon-info ui-btn-icon-left highlight-btn" data-transition="slide">About App</a>
+    <a href="#schedule" class="ui-btn ui-icon-calendar ui-btn-icon-left highlight-btn" data-transition="flip">View Exam Schedule</a>
+    <a href="#contact" class="ui-btn ui-icon-mail ui-btn-icon-left highlight-btn" data-transition="pop">Contact Support</a>
+
+    <button id="welcomeAlert" class="ui-btn ui-btn-b ui-icon-star ui-btn-icon-left">Show Welcome Alert</button>
+  </div>
+
+  <div data-role="footer" class="custom-footer" data-position="fixed">
+    <h4>&copy; 2025 Exam Portal</h4>
+  </div>
+</div>
+
+<!-- ℹ️ ABOUT PAGE -->
+<div data-role="page" id="about">
+  <div data-role="header" class="custom-header">
+    <a href="#home" data-icon="back" data-transition="slide">Back</a>
+    <h1>About</h1>
+  </div>
+
+  <div class="ui-content custom-content">
+    <p>This mobile web app allows students to:</p>
+    <ul data-role="listview" data-inset="true">
+      <li>📅 View upcoming exams</li>
+      <li>📊 Check results</li>
+      <li>🔔 Receive notifications</li>
+      <li>📝 Contact admin for help</li>
+    </ul>
+  </div>
+
+  <div data-role="footer" class="custom-footer" data-position="fixed">
+    <h4>Powered by jQuery Mobile</h4>
+  </div>
+</div>
+
+<!-- 📅 EXAM SCHEDULE PAGE -->
+<div data-role="page" id="schedule">
+  <div data-role="header" class="custom-header">
+    <a href="#home" data-icon="home" data-transition="fade">Home</a>
+    <h1>Exam Schedule</h1>
+  </div>
+
+  <div class="ui-content custom-content">
+    <ul data-role="listview" data-inset="true" data-theme="b">
+      <li><h2>📘 Math Mid-Term</h2><p>🗓️ May 10, 2025</p></li>
+      <li><h2>📗 Physics Quiz</h2><p>🗓️ May 12, 2025</p></li>
+      <li><h2>💻 CS Final</h2><p>🗓️ May 15, 2025</p></li>
+    </ul>
+  </div>
+
+  <div data-role="footer" class="custom-footer" data-position="fixed">
+    <h4>Stay Prepared!</h4>
+  </div>
+</div>
+
+<!-- 📞 CONTACT PAGE -->
+<div data-role="page" id="contact">
+  <div data-role="header" class="custom-header">
+    <a href="#home" data-icon="home" data-transition="fade">Home</a>
+    <h1>Contact Us</h1>
+  </div>
+
+  <div class="ui-content custom-content">
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" name="name" id="name" placeholder="John Doe">
+
+      <label for="query">Your Query:</label>
+      <textarea name="query" id="query" placeholder="Write your question here..."></textarea>
+
+      <button type="submit" class="ui-btn ui-btn-b ui-icon-check ui-btn-icon-left">Submit</button>
+    </form>
+  </div>
+
+  <div data-role="footer" class="custom-footer" data-position="fixed">
+    <h4>Reach us anytime!</h4>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<style>
+  /* Custom styles to override Bootstrap */
+  .custom-heading {
+    font-size: 2.5rem;
+    color: #333;
+  }
+
+  .custom-paragraph {
+    font-size: 1.1rem;
+    color: #666;
+  }
+
+  .custom-button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .custom-button:hover {
+    background-color: #e55a00;
+  }
+</style>
+
+<div class="px-4 py-5 my-5 text-center">
+  <img
+    class="d-block mx-auto mb-4"
+    src="assets/ng.png"
+    alt=""
+    width="10%"
+    height="10%"
+  />
+  <h1 class="custom-heading display-5 fw-bold">Registration Login Angular Application</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="custom-paragraph lead mb-4">
+      This is a simple Angular application for user registration, login, and profile components. Angular components and local storage are used to design and develop this application.
+    </p>
+    <p class="custom-paragraph lead mb-4">
+      We are using a local service to store the data in local storage.
+    </p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <button
+        type="button"
+        class="custom-button btn btn-lg px-4 gap-3"
+        (click)="registerComponent()"
+      >
+        Register Now
+      </button>
+      <button
+        type="button"
+        class="custom-button btn btn-lg px-4"
+        (click)="login()"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+</div>

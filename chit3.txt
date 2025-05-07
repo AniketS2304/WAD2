@@ -1,0 +1,39 @@
+# Step 1: Create a GitHub account
+# Go to https://github.com and sign up for a free account.
+
+# Step 2: Create a new repository on GitHub
+# - Click on "New" to create a repository
+# - Give it a name, e.g., "my-first-repo"
+# - Choose public or private
+# - Click "Create repository"
+# You will see a page with "…or push an existing repository from the command line"
+
+# Step 3: On your local machine, open terminal/command prompt
+
+# If Git is not installed, download and install it from https://git-scm.com
+
+# Step 4: Create a project folder
+mkdir my-first-repo
+cd my-first-repo
+
+# Step 5: Initialize Git
+git init
+
+# Step 6: Create a file (or copy your code here)
+echo "Hello GitHub" > README.md
+
+# Step 7: Add the file to staging area
+git add README.md
+
+# Step 8: Commit the file
+git commit -m "Initial commit"
+
+# Step 9: Connect local repo to GitHub repo
+# Replace <your-username> and <repo-name> with your GitHub username and repo name
+git remote add origin https://github.com/<your-username>/<repo-name>.git
+
+# Step 10: Push code to GitHub
+git branch -M main
+git push -u origin main
+
+# Done! Check your GitHub repository, your code is uploaded!
